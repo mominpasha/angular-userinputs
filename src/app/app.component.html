@@ -1,4 +1,10 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<section>
+  <h2>Mouse Events - {{mousemsgs}}</h2>
+  <button (dblclick)="mouseEvent($event)" (click)="mouseEvent($event)">Click Me! Single or Double is fine....</button>
+  <button (mousedown)="mouseEvent($event)" (mouseover)="mouseEvent($event)" (mouseup)="mouseEvent($event)">Hover On Me</button>
+  <hr>
+  <h2>Keyboard Events - {{keyboardmsgs}}</h2>
+  <input type="text" placeholder="Try KeyboardEvents Here..." (focus)="keyboardEvent($event)" (blur)="keyboardEvent($event)" (keydown)="keyboardEvent($event)" (keyup.enter)="keyboardEvent($event)" (keyup.capslock)="keyboardEvent($event)" (keyup.esc)="keyboardEvent($event)" (keyup.space)="keyboardEvent($event)"
+  >
+  <!--Add this to text input (keyup)="keyboardEvent($event)" -->
+</section>

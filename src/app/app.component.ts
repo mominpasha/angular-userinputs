@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  mousemsgs:string = "";
+  keyboardmsgs:string = "";
+
+  mouseEvent(event){
+    this.mousemsgs = event.type;
+    console.log(event);
+  }
+
+  keyboardEvent(event){
+    this.keyboardmsgs = event.type + " - " + event.code;
+    console.log(event);
+  }
+
 }
